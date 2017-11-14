@@ -25,6 +25,9 @@ const NewPost = styled(Link)`
         right: 0;
         margin: 10px 10px 0px 0px;
         z-index: +1;
+        &:hover{
+            background: #4A1831;
+        }
 `
 
 const HeaderBackground = styled.div`
@@ -38,12 +41,15 @@ const HeaderBackground = styled.div`
         z-index: +1;
 `
 
-const Header = () => {
+const Header = (props) => {
         return (
         <div>
            <HeaderBackground>
-                <Title to="#"> Pulse </Title>
-                <NewPost to='/addPost'> add a new post </NewPost>
+                <Title to="/"> Pulse </Title>
+                {props.page === "addPost" ?
+                <NewPost to='/'> Go Back </NewPost> :
+                <NewPost to='/addPost'> Add a new Post </NewPost>
+            }
            </HeaderBackground>
         </div>
         )}
