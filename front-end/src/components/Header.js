@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const Title = styled.a`
+const Title = styled(Link)`
         font-size: 2.5em;
         text-align: left;
         padding-left: 10px;
@@ -11,10 +12,11 @@ const Title = styled.a`
         z-index: +1;
 `
 
-const NewPost = styled.a`
+const NewPost = styled(Link)`
         border-radius: 3px;
         padding: 0.25em 1em;
         background: transparent;
+        text-decoration: none;
         color: #c0392b;
         background: #ecf0f1;
         font-family: 'Quicksand', sans-serif;
@@ -40,8 +42,8 @@ const Header = () => {
         return (
         <div>
            <HeaderBackground>
-                <Title href="#"> Pulse </Title>
-                <NewPost onClick={() => console.log("success")}> add a new post </NewPost>
+                <Title to="#"> Pulse </Title>
+                <NewPost to='/addPost'> add a new post </NewPost>
            </HeaderBackground>
         </div>
         )}
