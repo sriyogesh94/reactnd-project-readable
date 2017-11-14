@@ -3,17 +3,27 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const Title = styled(Link)`
-        font-size: 2.5em;
+        font-size: 2em;
         text-align: left;
         padding-left: 10px;
         color: #FFFFF7;
         text-decoration: none;
         font-family: 'Quicksand', sans-serif;
         z-index: +1;
+        text-shadow:
+        0 1px #808d93,
+        -1px 0 #cdd2d5,
+        -1px 2px #808d93;
+        &:hover{
+                color: #FFFFFF;
+                text-shadow:
+                0 1px #4A1831
+        }
 `
 
 const NewPost = styled(Link)`
         border-radius: 3px;
+        margin-top: 12px;
         padding: 0.25em 1em;
         background: transparent;
         text-decoration: none;
